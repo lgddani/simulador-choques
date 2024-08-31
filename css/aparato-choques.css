@@ -1,0 +1,356 @@
+body {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.principal-content{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    text-align: left;
+}
+
+.introduccion p, .instrucciones p{
+    font-size: 1.5rem;
+}
+
+.instrucciones{
+    margin-top: 2rem;
+}
+
+.sub-heading{
+    font-size: 3.5rem;
+    color: var(--main-color);
+}
+
+.fa-circle-right{
+    margin-right: 1rem;
+    color: var(--main-color);
+}
+
+.ruler {
+    width: 50px;
+    height: 500px;
+    position: relative;
+    background: repeating-linear-gradient(
+        to bottom,
+        #ddd,
+        #ddd 1px,
+        transparent 1px,
+        transparent 10px
+    );
+    border-right: 2px solid #fff;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.ruler:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 40px, #fff 40px, #fff 41px, transparent 41px);
+    background-size: 10px 10px;
+}
+
+.ruler div {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    color: white;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.ruler .decimeter {
+    top: 0;
+    height: 10%;
+}
+
+.ruler .centimeter {
+    top: 10%;
+    height: 10%;
+}
+
+.ruler .meter {
+    top: 20%;
+    height: 10%;
+}
+
+/* Adding numbers to the ruler */
+.ruler .mark {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    font-size: 12px;
+}
+
+.ruler .mark:nth-child(2) { top: 8%; }
+.ruler .mark:nth-child(3) { top: 18%; }
+.ruler .mark:nth-child(4) { top: 28%; }
+.ruler .mark:nth-child(5) { top: 38%; }
+.ruler .mark:nth-child(6) { top: 48%; }
+.ruler .mark:nth-child(7) { top: 58%; }
+.ruler .mark:nth-child(8) { top: 68%; }
+.ruler .mark:nth-child(9) { top: 78%; }
+.ruler .mark:nth-child(10) { top: 88%; }
+.ruler .mark:nth-child(11) { top: 98%; }
+
+canvas {
+    border: 1px solid #fff;
+    background-color: var(--second-bg-color);
+}
+
+.div2 {
+    margin-bottom: 20px;
+}
+
+
+/* Tabla de resultados */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    background-color: var(--second-bg-color);
+}
+th, td {
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 8px;
+}
+
+#Ho, #h1, #e1{
+    color: #6ef752;
+}
+
+#H1, #h2, #e2{
+    color: rgb(68, 233, 242);
+} 
+
+#H2, #h3, #e3{
+    color: yellow;
+}
+
+
+/* Detalles */
+
+/* Checkbox */
+.checkbox-wrapper-46 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+.checkbox-wrapper-46 .cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.checkbox-wrapper-46 .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098a9;
+    transition: all 0.2s ease;
+}
+.checkbox-wrapper-46 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #506eec;
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+}
+.checkbox-wrapper-46 .cbx span:last-child {
+    padding-left: 8px;
+}
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+    border-color: #506eec;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+    background: #506eec;
+    border-color: #506eec;
+    animation: wave-46 0.4s ease;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+@keyframes wave-46 {
+    50% {
+      transform: scale(0.9);
+    }
+}
+
+
+/* Input */
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto !important;
+}
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 14px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+} 
+.form__field::placeholder {
+    color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 14px;
+    cursor: text;
+    top: 20px;
+}
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: #9b9b9b;
+    pointer-events: none;
+} 
+.form__field:focus {
+    padding-bottom: 5px;
+    font-weight: 600;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #4E7EFD);
+    border-image-slice: 1;
+} 
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: #4E7EFD;
+    font-weight: 700;
+}
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+
+/* Botón */
+.botones{
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.buttons{
+    margin: 0 auto;
+}
+
+button {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid var(--main-color);
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+    margin: 1rem;
+    width: 15rem;
+}
+  
+button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: var(--main-color);
+    z-index: -1;
+}
+  
+button:hover, button:focus {
+    color: white;
+}
+  
+button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+  
+button:active {
+    transform: scale(0.9);
+}
+
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+    .principal-content{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    canvas{
+        width: 250px;
+    }
+
+    .ruler{
+        height: 310px;
+    }
+    
+}

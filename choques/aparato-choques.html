@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Rebote</title>
+    <link rel="stylesheet" href="../css/aparato-choques.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" href="../img/opcion1.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="div2">
+        <h4 class="heading">Coeficiente de Restitución</h4>
+        <section class="principal-content">
+            <div class="introduccion">
+                <p>Bienvenido a la simulación del coeficiente de restitución, una herramienta interactiva para explorar el comportamiento de diferentes tipos de bolas al rebotar. En esta simulación, podrás experimentar cómo varían las alturas de rebote en función de la altura inicial y el tipo de bola que selecciones.</p>
+            </div>
+            <div class="instrucciones">
+                <h3 class="sub-heading">Instrucciones</h3>
+                <p><i class="fa-solid fa-circle-right"></i> Escoger el objeto a simular.</p>
+                <p><i class="fa-solid fa-circle-right"></i> Agregar la altura inicial (que deberá estar entre 50 y 100 centímetros).</p>
+                <p><i class="fa-solid fa-circle-right"></i> Si se elige la opción "Ralentizado", el movimiento se hará diez veces más lento.</p>
+                <p><i class="fa-solid fa-circle-right"></i> Al dar click en "Comenzar" se ejecutará la simulación y se obtendrá los resultados.</p>
+                <p><i class="fa-solid fa-circle-right"></i> Al finalizar la simulación, la aplicación mostrará el coeficiente de restitución del objeto escogido.</p>
+            </div>
+        </section>
+
+        <br><br><br><br>
+        <form id="inputForm">
+            <label for="material" style="font-size: 1.5rem;">Seleccione un objeto:</label>
+            <select id="material">
+                <option value="steel">Bola de Acero</option>
+                <option value="tennis">Pelota de Tenis</option>
+                <option value="rubber">Bola de Goma</option>
+                <option value="golf">Pelota de Golf</option>
+                <option value="espuma">Pelota antiestrés</option>
+            </select>
+            <br><br>
+
+            <div class="form__group field">
+                <input type="number" id="height" class="form__field" placeholder="Altura inicial (cm)" min="50" max="100" required>
+                <label for="height" class="form__label">Altura inicial (cm)</label>
+            </div>
+            <br><br>
+
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46" class="inp-cbx" />
+                <label for="cbx-46" class="cbx"
+                  ><span>
+                    <svg viewBox="0 0 12 10" height="10px" width="12px">
+                      <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                  ><span style="font-size: 1.5rem;">Ralentizado</span>
+                </label>
+            </div>
+
+            <br><br>
+            <div class="botones">
+                <div class="buttons">
+                    <button type="button" onclick="startSimulation()">Comenzar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <br><br><br><br>
+    <div class="container">
+        <div class="ruler">
+            <div class="mark">100 cm</div>
+            <div class="mark">90 cm</div>
+            <div class="mark">80 cm</div>
+            <div class="mark">70 cm</div>
+            <div class="mark">60 cm</div>
+            <div class="mark">50 cm</div>
+            <div class="mark">40 cm</div>
+            <div class="mark">30 cm</div>
+            <div class="mark">20 cm</div>
+            <div class="mark">10 cm</div>
+            <div class="mark">0 cm</div>
+        </div>
+        <canvas id="canvas" width="400" height="500"></canvas>
+    </div>
+
+    <br><br><br><br><br>
+    <h2 style="color: var(--main-color);">Resultados del Coeficiente de Restitución</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Caída</th>
+                <th>Rebote</th>
+                <th>Altura Caída (m)</th>
+                <th>Altura Rebote (m)</th>
+                <th>Coeficiente de Restitución</th>
+            </tr>
+        </thead>
+        <tbody id="resultsTable">
+            <tr>
+                <td>Ho</td>
+                <td>h1</td>
+                <td id="Ho"></td>
+                <td id="h1"></td>
+                <td id="e1"></td>
+            </tr>
+            <tr>
+                <td>H1</td>
+                <td>h2</td>
+                <td id="H1"></td>
+                <td id="h2"></td>
+                <td id="e2"></td>
+            </tr>
+            <tr>
+                <td>H2</td>
+                <td>h3</td>
+                <td id="H2"></td>
+                <td id="h3"></td>
+                <td id="e3"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <div class="footer-content">
+            <img src="../img/espe.png" alt="Universidad de las Fuerzas Armadas ESPE" class="footer-logo">
+            <p>&copy; 2024 - Universidad de las Fuerzas Armadas ESPE. Todos los derechos reservados.</p>
+            <p>Departamento de Ciencias Exactas - Física 1</p>
+        </div>
+    </footer>
+
+    <script src="../js/fo.js"></script>
+    <script src="../js/aparato-choques.js"></script>
+</body>
+</html>

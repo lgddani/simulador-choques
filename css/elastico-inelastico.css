@@ -1,0 +1,531 @@
+.subtitulos{
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.color-carrito-1{
+    color: #6ef752;
+}
+
+.color-carrito-2{
+    color: rgb(68, 233, 242);
+}
+
+.color-totales{
+    color: yellow;
+}
+
+
+/* Principal-content */
+.principal-content{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.introduccion p, .instrucciones p{
+    font-size: 1.5rem;
+}
+
+.instrucciones{
+    margin-top: 2rem;
+}
+
+.sub-heading{
+    font-size: 3.5rem;
+    color: var(--main-color);
+}
+
+.fa-circle-right{
+    margin-right: 1rem;
+    color: var(--main-color);
+}
+
+
+/* Second-content */
+
+.second-content{
+    margin-top: 10rem;
+    background-color: var(--second-bg-color);
+}
+.simulador {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 { 
+    grid-area: 1 / 1 / 5 / 10; 
+    /* background-color: red; */
+    height: 20rem;
+}
+
+.acciones{
+    margin-left: 20%;
+    /* background-color: slateblue; */
+    width: 15%;
+    height: 100%;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* Radio buttons */
+.container {
+    --s: 1.5em; /* control the size */
+    --g: 10px; /* the gap */
+    /* --c: #009688;  */
+    --c: #4E7EFD;
+  
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: var(--g);
+    position: relative;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+}
+.container:before {
+    content: "";
+    position: absolute;
+    height: calc(var(--s) / 2);
+    left: calc(var(--s) / 4 + var(--_x, 0px));
+    top: calc(var(--s) / 4);
+    background: var(--c);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    transition: 0.4s, left cubic-bezier(0.1, -2000, 0.7, -2000) 0.4s;
+}
+.container label {
+    display: inline-flex;
+    line-height: var(--s);
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.container input {
+    height: var(--s);
+    aspect-ratio: 1;
+    border: calc(var(--s) / 8) solid var(--_c, #939393);
+    border-radius: 50%;
+    outline-offset: calc(var(--s) / 10);
+    padding: calc(var(--s) / 8);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    font-size: inherit;
+    margin: 0;
+    transition: 0.3s;
+}
+.container input:checked {
+    --_c: var(--c);
+}
+.container:not(:has(input:checked)):before {
+    --_i: -1;
+    opacity: 0;
+}
+.container:has(input:checked):before {
+    opacity: 1;
+    transform: translateY(calc(var(--_i) * (var(--s) + var(--g))));
+}
+.container:has(label:nth-child(1) input:checked):before {
+    --_i: 0;
+    --_x: 0.02px;
+}
+.container:has(label:nth-child(2) input:checked):before {
+    --_i: 1;
+    --_x: 0.04px;
+}
+.container:has(label:nth-child(3) input:checked):before {
+    --_i: 2;
+    --_x: 0.06px;
+}
+.container:has(label:nth-child(4) input:checked):before {
+    --_i: 3;
+    --_x: 0.08px;
+}
+.container:has(label:nth-child(5) input:checked):before {
+    --_i: 4;
+    --_x: 0.1px;
+}
+.container input:disabled {
+    background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+@media print {
+    input[type="radio"] {
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      appearance: auto;
+      background: none;
+    }
+}
+@supports not selector(:has(*)) {
+    .container:before {
+      display: none;
+    }
+    .container input:checked {
+      --_c: var(--c);
+      background: var(--c) content-box;
+    }
+}
+  
+/* Checkbox */
+.checkbox-wrapper-46 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+.checkbox-wrapper-46 .cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.checkbox-wrapper-46 .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098a9;
+    transition: all 0.2s ease;
+}
+.checkbox-wrapper-46 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #506eec;
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+}
+.checkbox-wrapper-46 .cbx span:last-child {
+    padding-left: 8px;
+}
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+    border-color: #506eec;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+    background: #506eec;
+    border-color: #506eec;
+    animation: wave-46 0.4s ease;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+@keyframes wave-46 {
+    50% {
+      transform: scale(0.9);
+    }
+}
+
+.datos{
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+.carrito-1, .carrito-2{
+    display: inline-block;
+    margin-left: 20%;
+}
+
+.subtitulos-2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Inputs */
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+}
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 14px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+} 
+.form__field::placeholder {
+    color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 14px;
+    cursor: text;
+    top: 20px;
+}
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: #9b9b9b;
+    pointer-events: none;
+} 
+.form__field:focus {
+    padding-bottom: 5px;
+    font-weight: 600;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #4E7EFD);
+    border-image-slice: 1;
+} 
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: #4E7EFD;
+    font-weight: 700;
+}
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+  
+
+/* Buttons */
+
+.botones{
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.buttons{
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+#comenzarBtn:disabled {
+    background-color: grey; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+    cursor: not-allowed; /* Cambia el cursor a uno que indique que no se puede hacer clic */
+    opacity: 0.6; /* Reduce la opacidad para dar una apariencia de "desactivado" */
+}
+
+button {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid var(--main-color);
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+    margin: 1rem;
+    width: 15rem;
+}
+  
+button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: var(--main-color);
+    z-index: -1;
+}
+  
+button:hover, button:focus {
+    color: white;
+}
+  
+button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+  
+button:active {
+    transform: scale(0.9);
+}
+
+
+/* Espacio de simulación */
+.div2 { 
+    grid-area: 5 / 1 / 10 / 10; 
+    background-color: var(--bg-color);
+    margin-top: 5rem;
+    height: 30rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+#simulador{
+    width: 100%;
+    height: 30rem;
+}
+
+.div3 { 
+    grid-area: 10 / 1 / 13 / 4; 
+}
+
+.resultados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultado-velocidad, .resultado-momento, .resultado-energia{
+    margin: 1rem;
+}
+
+.subtitulos-3{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+.div4 { 
+    grid-area: 10 / 4 / 13 / 7; 
+
+}
+.div5 { 
+    grid-area: 10 / 7 / 13 / 10; 
+}
+
+.div3, .div4, .div5{
+    background-color: #525d75;
+    border: 4px solid black;
+    padding-top: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 1100px) {
+
+    /* Introducción */
+    header{
+        width: 100%;
+    }
+
+    .heading{
+        font-size: 4rem;
+    }
+
+    .principal-content{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .introduccion p, .instrucciones p{
+        font-size: 1.2rem;
+    }
+
+    .sub-heading{
+        font-size: 2.5rem;
+    }
+
+    /* Datos de acciones */
+    .div1 { 
+        /* height: 20rem; */
+        grid-area: 1 / 1 / 5 / 10;
+    }
+
+    .acciones{
+        display: block;
+        margin: 1rem auto;
+        width: 100%;
+    }
+
+    .acciones .container, .acciones .checkbox-wrapper-46{
+        margin-left: 30%;
+    }
+    
+    .acciones .checkbox-wrapper-46{
+        margin-top: 1rem;
+    }
+
+    /* Datos del formulario */
+    .datos{
+        width: 100%;
+        position: relative;
+    }
+
+    .carrito-1{
+        margin-left: 20%;
+    }
+
+    .subtitulos-2{
+        margin-top: 2rem;
+    }
+
+    /* Simulación */
+    .div2 { 
+        height: 30rem;
+        width: 100%;
+        grid-area: 5 / 1 / 7 / 10;
+    }
+
+    #simulador{
+        height: 300;
+        width: 100%;
+    }
+
+    /* Resultados */
+    .div3 { 
+        grid-area: 7 / 1 / 9 / 10;
+    }
+    .div4 { 
+        grid-area: 9 / 1 / 11 / 10;
+    }
+    .div5 { 
+        grid-area: 11 / 1 / 13 / 10;
+    }
+}
+
+
+
+
