@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choque Elástico e Inelástico</title>
+    <link rel="icon" href="../img/opcion2.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/elastico-inelastico.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="heading">Choque Elástico e Inelástico</h1>
+    </header>
+
+    <section class="principal-content">
+        <div class="introduccion">
+            <p>Esta aplicación trata de los casos extremos de un proceso de colisión ilustrado con dos carros: En un choque elástico se cumple que la suma de las energías cinéticas de los cuerpos involucrados es constante. Sin embargo, tras un choque totalmente inelástico, ambos cuerpos tienen la misma velocidad; la suma de sus energías cinéticas es menor que la inicial porque una parte de esta se ha transformado en energía interna (calentamiento).</p>
+            <br>
+            <p>El momento total de los cuerpos involucrados se conserva, independientemente de que el choque sea elástico o inelástico. El movimiento del centro de masas (indicado por un punto amarillo) no se ve afectado por el proceso de colisión.</p>
+        </div>
+        <div class="instrucciones">
+            <h3 class="sub-heading">Instrucciones</h3>
+            <p><i class="fa-solid fa-circle-right"></i> Elegir entre choque elástico o inelástico.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Agregar los datos de las masas y velocidades iniciales de los carritos.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Si se elige la opción "Ralentizado", el movimiento se hará diez veces más lento.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Al dar click en "Comenzar" se ejecutará la simulación y se obtendrá los resultados.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Para volver a ejecutar la aplicación, se deberá dar click en "Resetear".</p>
+            <p><i class="fa-solid fa-circle-right"></i> Mediante el botón "Resetear", los carritos vuelven a sus posiciones iniciales y se limpia los resultados.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Se puede volver a elegir los valores de la masa y de la velocidad inicial en los campos de texto correspondientes.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Los valores positivos de la velocidad resultan en un movimiento lateral hacia la derecha.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Los valores negativos de la velocidad resultan en un movimiento lateral hacia la izquierda.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Si algún campo no está bien implementado, saldrá una alerta del campo a corregir.</p>
+            <p><i class="fa-solid fa-circle-right"></i> Finalmente, la aplicación mostrará las velocidades, momentos y energías cinéticas de los carros.</p>
+        </div>
+    </section>
+
+    <section class="second-content">
+        <div class="simulador">
+            <div class="div1">
+                <div class="acciones">
+                    <h4 class="subtitulos">Acciones</h4>
+                    <div class="container">
+                        <label><input name="tipoChoque" type="radio" required/> Choque Elástico</label>
+                        <label><input name="tipoChoque" type="radio" required/> Choque Inelástico</label>
+                    </div>
+                    <div class="checkbox-wrapper-46">
+                        <input type="checkbox" id="cbx-46" class="inp-cbx" />
+                        <label for="cbx-46" class="cbx"
+                          ><span>
+                            <svg viewBox="0 0 12 10" height="10px" width="12px">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                          ><span>Ralentizado</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="datos">
+                    <h4 class="subtitulos">Datos</h4>
+                    <div class="carrito-1">
+                        <h4 class="subtitulos-2"><span class="color-carrito-1">Carrito 1</span></h4>
+                        <div class="form__group field">
+                            <input type="number" id="masa1" class="form__field" placeholder="Masa" required step="0.1" max="20">
+                            <label for="masa" class="form__label">Masa (kg)</label>
+                        </div>
+                        <div class="form__group field">
+                            <input type="number" id="velocidad1" class="form__field" placeholder="Velocidad" required step="0.1" max="5">
+                            <label for="velocidad" class="form__label">Velocidad (m/s)</label>
+                        </div>
+                    </div>
+
+                    <div class="carrito-2">
+                        <h4 class="subtitulos-2"><span class="color-carrito-2">Carrito 2</span></h4>
+                        <div class="form__group field">
+                            <input type="number" id="masa2" class="form__field" placeholder="Masa" required step="0.1" max="20">
+                            <label for="masa" class="form__label">Masa (kg)</label>
+                        </div>
+                        <div class="form__group field">
+                            <input type="number" id="velocidad2" class="form__field" placeholder="Velocidad" required step="0.1" max="5">
+                            <label for="velocidad" class="form__label">Velocidad (m/s)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <div class="buttons">
+                        <button id="comenzarBtn"> Comenzar</button>
+                        <button id="resetearBtn"> Resetear</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="div2">
+                <h4 class="subtitulos">Simulación</h4>
+                <canvas id="simulador" width="750" height="400"></canvas>
+            </div>
+            <div class="div3">
+                <h4 class="subtitulos">Velocidad</h4>
+                <br>
+                <div class="resultados">
+                    <div class="resultado-velocidad">
+                        <h4 class="subtitulos-2">Antes del choque:</h4>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-carrito-1">Carrito 1</span>: <span id="velocidad-inicial-carrito1"></span> m/s</h5>
+                        <h5 class="subtitulos-3"><span class="color-carrito-2">Carrito 2</span>: <span id="velocidad-inicial-carrito2"></span> m/s</h5>
+                    </div>
+                    <div class="resultado-velocidad">
+                        <h4 class="subtitulos-2">Después del choque:</h4>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-carrito-1">Carrito 1</span>: <span id="velocidad-final-carrito1"></span> m/s</h5>
+                        <h5 class="subtitulos-3"><span class="color-carrito-2">Carrito 2</span>: <span id="velocidad-final-carrito2"></span> m/s</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="div4">
+                <h4 class="subtitulos">Momento</h4>
+                <br>
+                <div class="resultados">
+                    <div class="resultado-momento">
+                        <h4 class="subtitulos-2">Antes del choque:</h4>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-carrito-1">Carrito 1</span>: <span id="momento-antes-del-choque-carrito1"></span> kg m/s</h5>
+                        <h5 class="subtitulos-3"><span class="color-carrito-2">Carrito 2</span>: <span id="momento-antes-del-choque-carrito2"></span> kg m/s</h5>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-totales">Momento Total</span>: <span id="momento-antes-del-choque-total"></span> kg m/s</h5>
+                    </div>
+                    <div class="resultado-momento">
+                        <h4 class="subtitulos-2">Después del choque:</h4>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-carrito-1">Carrito 1</span>: <span id="momento-despues-del-choque-carrito1"></span> kg m/s</h5>
+                        <h5 class="subtitulos-3"><span class="color-carrito-2">Carrito 2</span>: <span id="momento-despues-del-choque-carrito2"></span> kg m/s</h5>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-totales">Momento Total</span>: <span id="momento-despues-del-choque-total"></span> kg m/s</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="div5">
+                <h4 class="subtitulos">Energía cinética</h4>
+                <br>
+                <div class="resultados">
+                    <div class="resultado-energia">
+                        <h4 class="subtitulos-2">Antes del choque:</h4>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-carrito-1">Carrito 1</span>: <span id="energia-antes-del-choque-carrito1"></span> J</h5>
+                        <h5 class="subtitulos-3"><span class="color-carrito-2">Carrito 2</span>: <span id="energia-antes-del-choque-carrito2"></span> J</h5>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-totales">Energía Cinética Total</span>: <span id="energia-antes-del-choque-total"></span> J</h5>
+                    </div>
+                    <div class="resultado-energia">
+                        <h4 class="subtitulos-2">Después del choque:</h4>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-carrito-1">Carrito 1</span>: <span id="energia-despues-del-choque-carrito1"></span> J</h5>
+                        <h5 class="subtitulos-3"><span class="color-carrito-2">Carrito 2</span>: <span id="energia-despues-del-choque-carrito2"></span> J</h5>
+                        <br>
+                        <h5 class="subtitulos-3"><span class="color-totales">Energía Cinética Total</span>: <span id="energia-despues-del-choque-total"></span> J</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <img src="../img/espe.png" alt="Universidad de las Fuerzas Armadas ESPE" class="footer-logo">
+            <p>&copy; 2024 - Universidad de las Fuerzas Armadas ESPE. Todos los derechos reservados.</p>
+            <p>Departamento de Ciencias Exactas - Física 1</p>
+        </div>
+    </footer>
+    
+
+    <script src="../js/fo.js"></script>
+    <script src="../js/elastico-inelastico.js"></script>
+</body>
+</html>
