@@ -8,39 +8,93 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="Universidad de las Fuerzas Armadas ESPE">
 
-    <title>Simulador de Choques</title>
+    <title>Simulador de choques</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1 class="heading">Simulador de choques</h1>
+    <h1 class="heading">Simulador de Choques</h1>
     <div class="contenido-principal">
-        <h1>Bienvenido a la Simulación Interactiva</h1>
-        <p>Explora el fascinante mundo de la física con nuestras simulaciones interactivas. En esta página, puedes experimentar dos tipos de simulaciones educativas:</p>
+        <h2>Bienvenido a la Simulación Interactiva</h2>
         <br>
-        <ul>
-            <li><strong style="color: var(--main-color);">Simulación de Choques entre Carritos:</strong> Investiga los principios de la física mediante choques elásticos e inelásticos entre carritos. Ajusta las velocidades, masas y tipos de choque para ver cómo varían los resultados y cómo afectan a las velocidades y energías cinéticas de los carritos.</li>
-            <li><strong style="color: var(--main-color);">Simulación del Coeficiente de Restitución:</strong> Observa el comportamiento de diferentes tipos de bolas en un entorno de rebote. Ajusta la altura inicial y selecciona el tipo de bola para ver cómo afecta la altura de rebote y calcula el coeficiente de restitución.</li>
-        </ul>
+        <p class="contenido-principal-intro">Explora el fascinante mundo de la física con nuestras simulaciones interactivas, diseñadas para hacer el aprendizaje más dinámico y accesible. En esta página, no solo tendrás acceso a contenido teórico y práctico sobre las Colisiones Elásticas, sino que también podrás experimentar de primera mano los principios fundamentales que rigen estas interacciones.</p>
         <br>
-        <p>Ambos simuladores están diseñados para proporcionar una comprensión más profunda de conceptos físicos clave y ofrecer una experiencia interactiva y educativa. Selecciona el simulador que te interese para comenzar y explorar cómo los principios de la física cobran vida a través de la simulación.</p>
+        <p>Nuestras simulaciones educativas te permiten observar y analizar cómo diferentes variables, como la masa y la velocidad, influyen en los resultados de una colisión. Podrás comparar distintos escenarios y comprender de manera más profunda los conceptos físicos que, de otra forma, podrían parecer abstractos. Esta es una oportunidad única para complementar tus estudios y enriquecer tu comprensión del tema a través de la experimentación directa.</p>
         <br>
-        <p>Por favor, <span style="color: var(--main-color);">escoge el simulador</span> con el que deseas interactuar y diviértete aprendiendo</p>
-
-    </div>
-    <div class="opciones">
-        <div class="opcion1">
-            <div class="img1" onclick="window.location.href='choques/aparato-choques.html'">
-                <img src="img/opcion1.png" alt="Choque elástico - Bola de acero">
-                <h3>Aparato de choques</h3>
+        <p>Las simulaciones con las que podrás interactuar son:</p>
+        <br>
+        <div class="cartas-intro">
+            <div class="card">
+                <div class="tools">
+                    <div class="circle">
+                    <span class="red box"></span>
+                    </div>
+                    <div class="circle">
+                    <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                    <span class="green box"></span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <h2>Choques entre carritos</h2>
+                    <br>
+                    <p> Investiga los principios de la física mediante choques elásticos e inelásticos entre carritos. Ajusta las velocidades, masas y tipos de choque para ver cómo varían los resultados y cómo afectan a las velocidades y energías cinéticas de los carritos.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="tools">
+                    <div class="circle">
+                    <span class="red box"></span>
+                    </div>
+                    <div class="circle">
+                    <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                    <span class="green box"></span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <h2>Coeficiente de Restitución</h2>
+                    <br>
+                    <p>Observa el comportamiento de diferentes tipos de bolas en un entorno de rebote. Ajusta la altura inicial y selecciona el tipo de bola para ver cómo afecta la altura de rebote y calcula el coeficiente de restitución.</p>
+                </div>
             </div>
         </div>
+        <br>
+        <div class="contenido_teoria">
+            <h2>¿Aún no estás listo?</h2>
+            <br>
+            <p>Revisa la teoría para facilitar tus resultados 😉</p>
+            <br>
+            <a class="btn" href="colisiones/teoria.html">Revisar teoría</a>
+        </div>
+        <br>
+        <p>Si ya estás listo, por favor <span style="color: var(--main-color);">escoge el simulador</span> con el que deseas interactuar y diviértete aprendiendo:</p>
+    </div>
+
+    <div class="opciones">
         <div class="opcion2">
             <div class="img2" onclick="window.location.href='choques/elastico-inelastico.html'">
                 <img src="img/opcion2.png" alt="Choques elásticos e inelásticos">
                 <h3>Carritos chocones</h3>
             </div>
         </div>
+        <div class="opcion1">
+            <div class="img1" onclick="window.location.href='choques/aparato-choques.html'">
+                <img src="img/opcion1.png" alt="Choque elástico - Bola de acero">
+                <h3>Aparato de choques</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenido_teoria">
+        <h2 style="color: var(--main-color)">¿Ya aprendiste lo suficiente?</h2>
+        <br>
+        <p>Pon a prueba tus conocimientos realizando este test 💪</p>
+        <br>
+        <a class="btn" href="colisiones/test.html">Realizar test</a>
     </div>
 
     <footer>
