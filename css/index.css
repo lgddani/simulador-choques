@@ -14,10 +14,7 @@
 	--second-bg-color: #101010;
 	--text-color: #fff;
 	--main-color: #4E7EFD;
-<<<<<<< HEAD
     --second-main-color: #4DC3F6;
-=======
->>>>>>> 76f90b7816b1f766e68ca5ee8f5905d7a82fc9b4
 }
 
 html{
@@ -195,16 +192,12 @@ body{
     margin-left: 23%;
     background-color: var(--second-bg-color);
     padding: 4rem;
-<<<<<<< HEAD
     border-radius: 10px;
-=======
->>>>>>> 76f90b7816b1f766e68ca5ee8f5905d7a82fc9b4
 }
 
 .opcion1, .opcion2{
     display: flex;
     width: 50%;
-<<<<<<< HEAD
 
     view-timeline-name: --image;
     view-timeline-axis: block;
@@ -212,8 +205,6 @@ body{
     animation-name: show;
     animation-range: entry 25% cover 60%;
     animation-fill-mode: both;
-=======
->>>>>>> 76f90b7816b1f766e68ca5ee8f5905d7a82fc9b4
 }
 
 .img1, .img2{
@@ -248,10 +239,7 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 14px;
-<<<<<<< HEAD
     margin-top: 2rem;
-=======
->>>>>>> 76f90b7816b1f766e68ca5ee8f5905d7a82fc9b4
 }
 
 footer .footer-content {
@@ -282,7 +270,6 @@ footer a:hover {
 /* Responsive */
 @media (max-width: 1200px) {
 
-<<<<<<< HEAD
     .contenido-principal{
         font-size: 1.5rem;
         margin-left: 3rem;
@@ -291,32 +278,22 @@ footer a:hover {
     
     .opciones, .cartas-intro{
         height: 100%;
-=======
-    .opciones{
-        height: 100vh;
->>>>>>> 76f90b7816b1f766e68ca5ee8f5905d7a82fc9b4
         display: inline-block;
         width: 100%;
         margin-left: 0;
     }
 
-<<<<<<< HEAD
     .card{
         margin-top: 1.5rem;
     }
 
-=======
->>>>>>> 76f90b7816b1f766e68ca5ee8f5905d7a82fc9b4
     .opcion1, .opcion2{
         width: 100%;
         margin-top: 3rem;
     }
-<<<<<<< HEAD
 
     .contenido_teoria{
         width: 300px;
         margin-top: 2rem;
     }
-=======
->>>>>>> 76f90b7816b1f766e68ca5ee8f5905d7a82fc9b4
 }
